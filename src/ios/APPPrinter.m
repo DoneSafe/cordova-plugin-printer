@@ -331,16 +331,7 @@
     NSURL* url = [NSURL URLWithString:urlAsString];
     UIPrinter* printer;
 
-    if (_previousPrinter && [_previousPrinter.URL.absoluteString isEqualToString:urlAsString])
-    {
-        printer = _previousPrinter;
-    }
-    else
-    {
-        printer = [UIPrinter printerWithURL:url];
-    }
-
-    return printer;
+    return [UIPrinter printerWithURL:url];
 }
 
 /**
